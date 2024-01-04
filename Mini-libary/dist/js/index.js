@@ -72,4 +72,3 @@ const toggleBookInfo = (currentBookDiv) => {
     bookInfo.style.display = bookInfo.style.display === 'none' ? 'block' : 'none';
 };
 getBooks();
-export {};
