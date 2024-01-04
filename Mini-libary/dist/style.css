@@ -1,0 +1,145 @@
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #e0ffe0, 0 0 20px #f9fab2, 0 0 30px #f2f08d, 0 0 40px #dfac5e, 0 0 50px #d0913f, 0 0 60px #bf722f, 0 0 70px #a55629;
+  }
+  to {
+    text-shadow: 0 0 20px #ccffcc, 0 0 30px #dbff99, 0 0 40px #66ff66, 0 0 50px #b8ff33, 0 0 60px #ddff00, 0 0 70px #5ccc00, 0 0 80px #95a195;
+  }
+}
+
+@font-face {
+  font-family: 'Nabla-Regular';
+  src: url('../font/Nabla-Regular.ttf');
+}
+
+@font-face { 
+  font-family: 'HappyMonkey-Regular';
+  src: url('../font/HappyMonkey-Regular.ttf');
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'HappyMonkey-Regular';
+    background-image: url(https://images.unsplash.com/photo-1516617217372-ca29bc8c4001?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+  font-family:'Nabla-Regular';
+    margin: 0 auto;
+    text-align: center;
+    width: max-content;
+}
+
+.glow {
+  font-size: 3rem;
+  text-align: center;
+  -webkit-animation: glow 4s ease-in-out infinite alternate;
+  -moz-animation: glow 4s ease-in-out infinite alternate;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+.highlight {
+    font-weight: bold;
+    color: rgba(38, 37, 37, 0.918);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.book {
+  width: 50rem;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+#wrapper {
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#booksGrid {
+  justify-content: center;   
+  width: 70rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns:auto;
+  gap: 10px;
+}
+
+.book:first-child,.book:nth-child(2),.book:nth-child(3),.book:nth-child(4),.book:nth-child(5),.book:nth-child(6),.book:nth-child(7),.book:nth-child(8){
+    background-repeat: no-repeat;
+    background-size: 16rem;
+    background-position: right 0;
+    padding-right: 16rem;
+} 
+
+/* Goodnight Moon */
+.book:first-child {
+    background-image: url(https://images-eu.ssl-images-amazon.com/images/I/71jLRxcl47L._AC_UL600_SR600,600_.jpg);
+}
+/* The Very Hungry Caterpillar */
+.book:nth-child(2) {
+    background-image: url(https://cdn.kobo.com/book-images/9c5e4a71-0d13-4d12-85b1-9132cda74edd/1200/1200/False/the-very-hungry-caterpillar-and-other-stories-1.jpg);
+}
+ /* A Wrinkle in Time */
+.book:nth-child(3) {
+    background-image: url(https://cdn.kobo.com/book-images/eee35fef-dd6b-48b3-9d76-cd40b09298a4/1200/1200/False/a-wrinkle-in-time-trilogy-1.jpg);
+}
+/* Harold and the Purple Crayon */
+.book:nth-child(4) {
+    background-image: url(https://cdn.kobo.com/book-images/55bbcc6a-8378-4b41-a3c1-a85d08dbbc5c/1200/1200/False/harold-and-the-purple-crayon-1.jpg);
+}
+/* Where the Wild Things Are */
+.book:nth-child(5) {
+    background-image: url(https://m.media-amazon.com/images/I/A1v5zbnyrUL._AC_UF894,1000_QL80_.jpg);
+}
+/* Madeline */
+.book:nth-child(6) {
+    background-image: url(https://m.media-amazon.com/images/I/91UCEGsNIIL._AC_UF1000,1000_QL80_.jpg);
+}
+/* The Tale of Peter Rabbit */
+.book:nth-child(7) {
+    background-image: url(https://cdn.kobo.com/book-images/2fe4aaed-74eb-4ed6-8730-87cd168ed21b/1200/1200/False/the-tale-of-peter-rabbit-noslen-classics-1.jpg);
+}
+/* Charlotte’s Web */
+.book:nth-child(8) {
+    background-image: url(https://embed.cdn.pais.scholastic.com/v1/channels/clubs-us/products/identifiers/isbn/9780590302715/primary/renditions/500);
+}
+
+.title--text {
+    cursor: pointer;
+    color: rgba(37, 33, 33, 0.985);
+}
+
+/* header animation*/
+.overlay {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  background: rgba(0, 0, 0, 0.7); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  visibility: hidden; 
+  opacity: 0; 
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.overlay-content {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
